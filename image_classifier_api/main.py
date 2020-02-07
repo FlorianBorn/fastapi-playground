@@ -40,7 +40,7 @@ async def predict():
 async def upload(file: bytes = File(...)):
     response = {}
     #img = Image.frombytes(mode="RGB", size=len(file), data=file)
-    img = Image.open(BytesIO(file))
+    img = await Image.open(BytesIO(file)).convert('RGB')
     img_tensor = pil2tensor(img,np.float32)
     print(type(img))
     img = fastai.vision.image.Image(img_tensor)
