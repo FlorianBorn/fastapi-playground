@@ -12,4 +12,5 @@ RUN pip3 install -vvv -r /app/requirements.txt
 COPY / /app/
 WORKDIR /app/
 
+RUN pip3 install python-multipart
 ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0"]
