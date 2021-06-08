@@ -3,4 +3,4 @@ starlette==0.12.9
 pydantic==1.4
 numpy==1.18.1
 fastapi==0.48.0
-Pillow==7.0.0
+Pillow==8.2.0
